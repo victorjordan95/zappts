@@ -11,6 +11,7 @@
   }
 
   .awssld__bullets {
+    bottom: 80px;
     z-index: 2;
 
     .awssld__bullets--active {
@@ -55,6 +56,7 @@
   .slider-text {
     color: $white;
     font-size: $text;
+    margin-bottom: 30px;
     text-align: center;
     width: 553px;
   }
