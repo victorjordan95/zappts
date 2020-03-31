@@ -7,7 +7,7 @@ import background2x from '../../assets/images/Data@2x.png';
 import background from '../../assets/images/Data.png';
 
 const SliderComponent = () => (
-  <section className="">
+  <section className="slide-content">
     <AwesomeSlider className="slider" organicArrows={false}>
       <div className="slider-item">
         <img

@@ -1,0 +1,76 @@
+.login {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 50vw;
+
+  > .title {
+    font-size: $title;
+    margin-bottom: 87px;
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 433px;
+    width: 100%;
+  }
+
+  .forgot-link {
+    align-self: flex-end;
+    color: $gray;
+    margin-bottom: 30px;
+    text-decoration: none;
+    &:hover {
+      color: darken($gray, 15%)
+    }
+  }
+
+  .separator {
+    color: $gray;
+    font-size: 0.875rem;
+    margin: 40px 0;
+    max-width: 433px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+
+    &:before,
+    &:after {
+      background-color: $gray;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    &:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+
+  .create-link {
+    color: $gray;
+    font-size: 1rem;
+    margin-top: 40px;
+
+    a {
+      color: $lightBlue;
+    }
+  }
+}
+
+.slide-content {
+  display: flex;
+  width: 50vw;
+}

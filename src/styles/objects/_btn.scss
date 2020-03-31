@@ -1,0 +1,54 @@
+.btn {
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  align-items: center;
+  background: transparent;
+  border: 1px solid $gray;
+  border-radius: 100px;
+  color: $black;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: $Muli;
+  font-weight: bold;
+  justify-content: space-evenly;
+  height: 45px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  transition: all ease 0.5s;
+  width: 175px;
+  &:hover {
+    background: $gray;
+    color: $white;
+  }
+
+  &.btn-primary {
+    background: $gray 0% 0% no-repeat padding-box;
+    color: $white;
+    &:hover {
+      background: darken($gray, 15%);
+    }
+  }
+
+  &.btn-sm {
+    width: 175px;
+  }
+
+  &.btn-md {
+    width: 263px;
+  }
+
+  &.btn-shadow {
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+    &:hover {
+      background: $white;
+      box-shadow: 0px 6px 9px #00000029;
+      color: $black;
+    }
+  }
+
+}

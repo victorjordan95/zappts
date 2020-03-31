@@ -1,0 +1,27 @@
+.input-group {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 18px;
+
+  label {
+    color: $gray;
+    font-family: $Muli;
+    margin-bottom: 4px;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid $black;
+    font-family: $Muli;
+    font-size: 16px;
+    height: 38px;
+    min-width: 433px;
+    padding: 0 20px;
+    transition: border ease 0.5s;
+    width: 100%;
+    &:focus {
+      border-bottom: 1px solid $lightBlue;
+      outline: none;
+    }
+  }
+}

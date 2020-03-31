@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier' 
+    'prettier'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -30,6 +30,11 @@ module.exports = {
       'warn',
       { extensions: ['.jsx', '.js'] }
     ],
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["label"],
+      "labelAttributes": ["htmlFor"],
+      "controlComponents": ["input"]
+    }]
   },
 };

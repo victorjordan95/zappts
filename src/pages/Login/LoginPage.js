@@ -1,12 +1,12 @@
 import React from 'react';
 
 import SliderComponent from '../../components/Slider/SliderComponent';
-
-// import { Container } from './styles';
+import LoginForm from '../../components/LoginForm/LoginForm';
 
 const LoginPage = () => (
   <main>
     <SliderComponent />
+    <LoginForm />
   </main>
 );
 
