@@ -3,6 +3,16 @@
   flex-flow: column wrap;
   margin-bottom: 18px;
 
+  &.has-error {
+    label {
+      color: $error;
+    }
+    input {
+      border-bottom: 1px solid $error;
+      color: $error;
+    }
+  }
+
   label {
     color: $gray;
     font-family: $Muli;
@@ -20,7 +30,7 @@
     transition: border ease 0.5s;
     width: 100%;
     &:focus {
-      border-bottom: 1px solid $lightBlue;
+      border-bottom: 2px solid $lightBlue;
       outline: none;
     }
   }

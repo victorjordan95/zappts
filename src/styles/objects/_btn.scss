@@ -24,6 +24,9 @@
     background: $gray;
     color: $white;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   &.btn-primary {
     background: $gray 0% 0% no-repeat padding-box;
