@@ -1,7 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import SliderComponent from '../../components/Slider/SliderComponent';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
 
-const RegisterPage = () => <h1>Register</h1>;
+const RegisterPage = () => (
+  <main>
+    <SliderComponent />
+    <RegisterForm />
+  </main>
+);
 
 export default RegisterPage;
