@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #f0f5f6;
+  color: #565656;
+  font-family: 'Muli', sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      position: initial;
+      top: 0;
+  }
+}
