@@ -17,7 +17,8 @@ const RegisterForm = () => {
   const [fullNameError, setFullNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
-  const [hasError, setHasError] = useState(false);
+
+  const [hasEmpty, setHasEmpty] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,21 +26,30 @@ const RegisterForm = () => {
     setFullNameError('');
     setEmailError('');
     setPasswordError('');
-    setHasError(false);
+    setHasEmpty(false);
+
+    if (!email || !fullName || !password) {
+      setHasEmpty(true);
+      return;
+    }
 
     if (!validateEmail(email)) {
       setEmailError('Email address is invalid');
-      setHasError(true);
     }
     if (!validateFullname(fullName)) {
       setFullNameError('Full name must contain at least 8 characters');
-      setHasError(true);
     }
     if (!validatePassword(password)) {
       setPasswordError(
         'Password must contains 7 to 15 characters which contain only characters, numeric digits, underscore and first character must be a letter'
       );
-      setHasError(true);
+    }
+    if (
+      validateEmail(email) &&
+      validateFullname(fullName) &&
+      validatePassword(password)
+    ) {
+      window.alert('Registered!');
     }
   };
 
@@ -58,6 +68,9 @@ const RegisterForm = () => {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
+          {hasEmpty && !fullName && (
+            <p className="help has-error">*This field can not be empty</p>
+          )}
           {fullNameError && <p className="help has-error">{fullNameError}</p>}
         </div>
 
@@ -71,6 +84,9 @@ const RegisterForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {hasEmpty && !email && (
+            <p className="help has-error">*This field can not be empty</p>
+          )}
           {emailError && <p className="help has-error">{emailError}</p>}
         </div>
 
@@ -84,13 +100,16 @@ const RegisterForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {hasEmpty && !password && (
+            <p className="help has-error">*This field can not be empty</p>
+          )}
           {passwordError && <p className="help has-error">{passwordError}</p>}
         </div>
 
         <button
           type="submit"
           className="btn btn-primary"
-          disabled={!fullName || !email || !password || hasError}
+          // disabled={!fullName || !email || !password}
         >
           Sign up
         </button>

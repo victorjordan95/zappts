@@ -9,13 +9,23 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState([]);
+  const [hasEmpty, setHasEmpty] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setHasEmpty(false);
+
+    if (!email || !password) {
+      setHasEmpty(true);
+      return;
+    }
+
     setError({});
     if (!validateEmail(email)) {
       setError(...error, { email: 'Email address is invalid' });
     }
+
+    window.alert('Logged!');
   };
 
   return (
@@ -33,6 +43,9 @@ const LoginForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {hasEmpty && !email && (
+            <p className="help has-error">*This field can not be empty</p>
+          )}
           {error.email && <p className="help has-error">{error.email}</p>}
         </div>
 
@@ -46,17 +59,16 @@ const LoginForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {hasEmpty && !password && (
+            <p className="help has-error">*This field can not be empty</p>
+          )}
         </div>
 
         <a href="/" className="forgot-link">
           Forgot password?
         </a>
 
-        <button
-          type="submit"
-          className="btn btn-primary"
-          disabled={!email || !password}
-        >
+        <button type="submit" className="btn btn-primary">
           Sign In
         </button>
       </form>
