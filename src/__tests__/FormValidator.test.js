@@ -23,10 +23,10 @@ describe('Check full name', () => {
 });
 
 describe('Check password', () => {
-  test('Password that meet all requirements must return false', () => {
-    expect(validatePassword('teste')).toBe(false);
-  });
-  test('Password that not meet all requirements must return true', () => {
+  test('Password that meet all requirements must return true', () => {
     expect(validatePassword('Teste123')).toBe(true);
+  });
+  test('Password that not meet all requirements must return false', () => {
+    expect(validatePassword('teste')).toBe(false);
   });
 });
