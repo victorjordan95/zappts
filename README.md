@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as a front-end test, for Zappts Company!
 
-You can run locally or [access it online](zappts-login.surge.sh)
+You can run locally or [access it online](http://zappts-login.surge.sh)
 
 I would like to thank you for the opportunity and I hope you like the result!
 
