@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can run locally or [access it online](zappts-login.surge.sh)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -15,6 +17,7 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
+For test, it was used [Jest](https://jestjs.io/)
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
