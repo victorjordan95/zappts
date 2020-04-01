@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { validadeEmail } from '../../utils/formValidator';
+import { validateEmail } from '../../utils/formValidator';
 
 import GoogleLogo from '../../assets/images/google-logo.svg';
 
@@ -13,7 +13,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError({});
-    if (validadeEmail(email)) {
+    if (!validateEmail(email)) {
       setError(...error, { email: 'Email address is invalid' });
     }
   };
