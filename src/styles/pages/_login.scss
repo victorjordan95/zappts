@@ -3,7 +3,11 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 50vw;
+  width: 100vw;
+  @media screen and (min-width: $screen-desktop-min) {
+    width: 50vw;
+
+  }
 
   > .title {
     font-size: $title;
@@ -29,6 +33,10 @@
     color: $gray;
     margin-bottom: 30px;
     text-decoration: none;
+    margin-right: 16px;
+    @media screen and (min-width: $screen-tablet-min) {
+      margin-right: 0;
+    }
     &:hover {
       color: darken($gray, 15%)
     }
@@ -38,10 +46,12 @@
     color: $gray;
     font-size: 0.875rem;
     margin: 40px 0;
-    max-width: 433px;
     overflow: hidden;
     text-align: center;
     width: 100%;
+    @media screen and (min-width: $screen-tablet-min) {
+      max-width: 433px;
+    }
 
     &:before,
     &:after {
@@ -51,7 +61,10 @@
       height: 1px;
       position: relative;
       vertical-align: middle;
-      width: 50%;
+      width: 40%;
+      @media screen and (min-width: $screen-tablet-min) {
+        width: 50%;
+      }
     }
 
     &:before {
@@ -80,6 +93,8 @@
 }
 
 .slide-content {
-  display: flex;
-  width: 50vw;
+  @media screen and (min-width: $screen-desktop-min) {
+    display: flex;
+    width: 50vw;
+  }
 }

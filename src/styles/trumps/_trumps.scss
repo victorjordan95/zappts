@@ -5,6 +5,10 @@
 .help {
   font-size: 0.775rem;
   margin: 4px 0;
+  width: 90vw;
+  @media screen and (min-width: $screen-tablet-min) {
+    width: 100%;
+  }
 }
 
 .has-error {

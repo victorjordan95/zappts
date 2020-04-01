@@ -25,10 +25,13 @@
     font-family: $Muli;
     font-size: 16px;
     height: 38px;
-    min-width: 433px;
     padding: 0 20px;
     transition: border ease 0.5s;
-    width: 100%;
+    width: 90vw;
+    @media screen and (min-width: $screen-tablet-min) {
+      min-width: 433px;
+      width: 100%;
+    }
     &:focus {
       border-bottom: 2px solid $lightBlue;
       outline: none;

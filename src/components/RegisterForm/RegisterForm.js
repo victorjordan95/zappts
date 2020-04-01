@@ -106,11 +106,7 @@ const RegisterForm = () => {
           {passwordError && <p className="help has-error">{passwordError}</p>}
         </div>
 
-        <button
-          type="submit"
-          className="btn btn-primary"
-          // disabled={!fullName || !email || !password}
-        >
+        <button type="submit" className="btn btn-primary">
           Sign up
         </button>
       </form>
@@ -129,7 +125,7 @@ const RegisterForm = () => {
       </span>
 
       <span className="create-link mb-40">
-        New Invision? <Link to="register">Create account</Link>
+        Already on Invision? <Link to="/"> Log in</Link>
       </span>
     </section>
   );

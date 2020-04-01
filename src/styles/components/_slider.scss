@@ -1,6 +1,6 @@
 .slider {
   display: none;
-  @media screen and (min-width: $screen-tablet-min) {
+  @media screen and (min-width: $screen-desktop-min) {
     display: block;
     height: 100%;
     min-height: 100vh;
@@ -34,7 +34,7 @@
   }
 
   .slider-item {
-    @media screen and (min-width: $screen-tablet-min) {
+    @media screen and (min-width: $screen-desktop-min) {
       align-items: center;
       display: flex;
       flex-flow: column wrap;
@@ -43,7 +43,7 @@
   }
 
   .slider-img {
-    @media screen and (min-width: $screen-tablet-min) {
+    @media screen and (min-width: $screen-desktop-min) {
       margin-bottom: 30px;
       max-width: 350px;
     }
