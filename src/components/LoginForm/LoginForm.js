@@ -23,6 +23,7 @@ const LoginForm = () => {
     setError({});
     if (!validateEmail(email)) {
       setError(...error, { email: 'Email address is invalid' });
+      return;
     }
 
     window.alert('Logged!');
